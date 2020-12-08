@@ -19,3 +19,6 @@ class BaseAction:
         q.clear()
         #     填写值
         q.send_keys(value)
+
+    def base_get_text_info(self, element):
+        return self.find_element(element).text
