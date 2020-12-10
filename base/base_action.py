@@ -16,9 +16,9 @@ class BaseAction:
     def base_send_keys(self, element, value):
         q = self.find_element(element=element)
         #     清空
-        q.clear()
+        # q.clear()
         #     填写值
         q.send_keys(value)
 
     def base_get_text_info(self, element):
-        return self.find_element(element).text
+        return self.find_element(element=element).text
