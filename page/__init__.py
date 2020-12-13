@@ -15,3 +15,18 @@ page_login_input_pwd = By.ID, "com.yunmall.lc:id/logon_password_textview"
 page_login_tab_login_btn = By.ID, "com.yunmall.lc:id/logon_button"
 # 判断是否登录成功
 page_login_sucess_info = By.ID, "com.yunmall.lc:id/tv_user_nikename"
+
+"应用更新模块配置"
+# 点击我去登陆 账号
+pageupdateapp_tab_me = By.ID, "com.yunmall.lc:id/tab_me"
+# 点击应用的设置按钮
+pageupdateapp_tab_settings = By.ID, "com.yunmall.lc:id/ymtitlebar_left_btn_image"
+# 滑动到底部点击关于百年奥莱
+pageupdateapp_swip_to_about_aolai_and_click = By.XPATH, "//*[@text='关于百年奥莱']"
+# 点击升级更新应用按钮
+pageupdateapp_tab_update_btn = By.XPATH, "//*[@text='版本更新']"
+
+"成为会员模块配置"
+pagejoinvip_tab_join_vip = "加入超级VIP"
+pagejoinvip_input_verification_code = By.XPATH, "//*[@type='tel']"
+pagejoinvip_tab_become_vip = By.XPATH, "//input[@value='立即成为会员']"

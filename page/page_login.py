@@ -40,7 +40,7 @@ class PageLogin(BaseAction):
         查找toast信息
         :param msg:
         :return:
-        '''
+        ''',
         page_login_toast_info = By.XPATH, "//*[contains(@text,'%s')]" % msg
         try:
             return self.base_get_text_info(element=page_login_toast_info)
