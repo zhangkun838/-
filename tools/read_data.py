@@ -2,6 +2,7 @@ import os
 
 import yaml
 
+
 # with open(file="../data/data_login.yaml", mode="r", encoding="utf-8") as f:
 #     a = yaml.load(stream=f, Loader=yaml.SafeLoader)
 #     for i in a.values():
@@ -18,4 +19,5 @@ def to_para(filename, test_key):
         return data_list
 
 
-print(to_para(filename="data_login.yaml", test_key="test_login"))
+if __name__ == '__main__':
+    print(to_para(filename="data_vip.yaml", test_key="test_vip"))

@@ -14,6 +14,7 @@ class BaseDriver:
         desired_caps['deviceName'] = '192.168.254.101:5555'
         desired_caps['appPackage'] = 'com.yunmall.lc'
         desired_caps['appActivity'] = 'com.yunmall.ymctoc.ui.activity.MainActivity'
+        # 如果加上Uiautomator2这句代码，"unicodeKeyboard": True就不用写了
         desired_caps['automationName'] = 'Uiautomator2'
         desired_caps['noReset'] = noReset
         return webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)

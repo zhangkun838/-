@@ -1,0 +1,8 @@
+test_vip:
+  test_vip_001:
+    keyword: "1111"
+    expect: "邀请码输入不正确"
+  test_vip_002:
+    #     这里的不能写null，因为这是要输入的内容，null是无法被输入的，所以会在self.pagejoinvip.pagejoinvip_2(value=keyword)报错
+    keyword: ""
+    expect: "请填写邀请码"

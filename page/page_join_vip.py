@@ -1,3 +1,4 @@
+import time
 from time import sleep
 
 from selenium.webdriver.common.by import By
@@ -43,4 +44,4 @@ class PageJoinVip(BaseAction):
     def pagejoinvip_2(self, value):
         self.pagejoinvip_input_verification_code(value=value)
         self.pagejoinvip_tab_become_vip()
-        sleep(3)
+        # sleep(1)

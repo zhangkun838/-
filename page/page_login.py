@@ -51,7 +51,7 @@ class PageLogin(BaseAction):
         self.page_login_close_update_info()
         self.base_click(element=page.page_login_tab_me)
         a = self.driver.current_activity
-        print("当前的页面：", a)
+        # print("当前的页面：", a)
         # 判断当前是否登录
         if a == "com.yunmall.ymctoc.ui.activity.LogonActivity":
             self.page_login_tab_already_have_account()
