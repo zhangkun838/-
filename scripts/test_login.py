@@ -19,7 +19,7 @@ class TestLogin:
     # @pytest.mark.parametrize("account,pwd",
     #                          [("itheima_test", "itheima")])
 
-    @pytest.mark.parametrize("args", to_para(filename="data_login.yaml", test_key="test_login"))
+    @pytest.mark.parametrize("args", to_para(filename="data_login.yaml", test_key="test_ship_to_addr"))
     def test_login(self, args):
         # 解析yaml数据
         account = args["account"]

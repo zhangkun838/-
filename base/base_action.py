@@ -11,6 +11,11 @@ class BaseAction:
         return WebDriverWait(driver=self.driver, timeout=timeout, poll_frequency=poll_frequency).until(
             lambda x: x.find_element(*element))
 
+    def find_elements(self, element, timeout=30, poll_frequency=0.5):
+        # 用显示等待
+        return WebDriverWait(driver=self.driver, timeout=timeout, poll_frequency=poll_frequency).until(
+            lambda x: x.find_elements(*element))
+
     def base_click(self, element):
         self.find_element(element).click()
 
@@ -59,6 +64,39 @@ class BaseAction:
             self.driver.swipe(right_x, right_y, left_x, left_y, 3000)
         else:
             raise Exception("只能【从左往右:ltr】【从右往左:rtl】【从上往下:utd】【从下往右上:dtu】}")
+
+    def base_assert_toast_info(self, msg):
+        '''
+        查找toast信息
+        :param msg:
+        :return:
+        ''',
+        toast_info = By.XPATH, "//*[contains(@text,'%s')]" % msg
+        try:
+            self.find_element(element=toast_info)
+            return True
+        except Exception:
+            return False
+
+    def base_get_toast(self, message):
+        """
+        根据 部分内容，获取toast上的所有内容
+        :param message: 部分内容
+        :return: 所有内容
+        """
+        if self.base_assert_toast_info(msg=message):
+            message_xpath = By.XPATH, "//*[contains(@text,'%s')]" % message
+            return self.find_element(message_xpath).text
+        else:
+            raise Exception("toast未出现，请检查参数是否正确或toast有没有出现在屏幕上")
+
+    # 判断元素是否存在
+    def base_is_element_existence(self, element):
+        try:
+            self.find_element(element=element)
+            return True
+        except Exception:
+            return False
 
     def base_swip_to_somewhere(self, msg, direction="dtu"):
         page_source = ""

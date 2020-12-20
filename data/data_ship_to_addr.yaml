@@ -1,0 +1,37 @@
+test_ship_to_addr:
+  test_add_address_001:
+    name: "张三"
+    phone: "18500001111"
+    detailed_address: "三单元 202"
+    postcode: "100000"
+    toast: NULL
+  test_add_address_002:
+    name: ""
+    phone: "13486955484"
+    detailed_address: "三单元 202"
+    postcode: "100000"
+    toast: "收件人姓名"
+  test_add_address_003:
+    name: "王磊"
+    phone: "1851234"
+    detailed_address: "三单元 202"
+    postcode: "100000"
+    toast: "11位手机号"
+  test_add_address_004:
+    name: "迩斯"
+    phone: "13273911234"
+    detailed_address: ""
+    postcode: "100000"
+    toast: "请输入详细地址"
+  test_add_address_005:
+    name: "斯利迪"
+    phone: "15538967010"
+    detailed_address: "三单元 232"
+    postcode: "123"
+    toast: "邮政编码错误"
+  test_add_address_006:
+    name: "王五"
+    phone: "15538967034"
+    detailed_address: "三单元 212"
+    postcode: ""
+    toast: NULL

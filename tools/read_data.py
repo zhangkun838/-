@@ -20,4 +20,4 @@ def to_para(filename, test_key):
 
 
 if __name__ == '__main__':
-    print(to_para(filename="data_vip.yaml", test_key="test_vip"))
+    print(to_para(filename="data_ship_to_addr.yaml", test_key="test_ship_to_addr"))
